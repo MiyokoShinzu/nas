@@ -134,16 +134,42 @@ svg {
         </div>
     </nav>
     <div class="row">
-        <div class="col-lg-3 mx-auto">
-            <div class="svg img-fluid" >
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53 53" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="27" y="28" style="fill:#424A60;" width="2" height="18"></rect> <rect x="37.5" y="2.893" transform="matrix(0.7071 0.7071 -0.7071 0.7071 20.8223 -23.2696)" style="fill:#424A60;" width="2" height="21.213"></rect> <rect x="15" y="21.858" transform="matrix(0.7071 0.7071 -0.7071 0.7071 30.1421 -0.7696)" style="fill:#424A60;" width="2" height="28.284"></rect> <rect x="10.722" y="13.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 15.6716 -8.8345)" style="fill:#424A60;" width="15.556" height="2"></rect> <rect x="26.893" y="32.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 34.6716 -16.7046)" style="fill:#424A60;" width="21.213" height="2"></rect> <circle style="fill:#1E90FF;" cx="48" cy="5" r="5"></circle> <circle style="fill:#1E90FF;" cx="28" cy="48" r="5"></circle> <circle style="fill:#1E90FF;" cx="5" cy="46" r="5"></circle> <circle style="fill:#1E90FF;" cx="12" cy="8" r="3"></circle> <circle style="fill:#1E90FF;" cx="44" cy="40" r="3"></circle> <circle style="fill:#1E90FF;" cx="28" cy="24" r="7"></circle> </g></svg>
-            </div>
-        </div>
-        <div class="col-11 col-lg-7 mx-auto">
+       
+        <div class="col-11 col-lg-7 mx-auto d-flex align-items-center justify-content-center flex-column">
             <h1 class="display-1 fw-bold">NAS CLUB</h1>
+            <div class="masking-container">
+    <h1 class="masked-text">NAS CLUB</h1>
+    <style>
+        
+.masked-text {
+    font-size: 8rem;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: 200%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+    </style>
+</div>
+
         <p class="lead mb-4">Welcome to our official club page. Join us</p>
-        <a href="about.html" class="btn btn-primary btn-lg me-2">About Us</a>
+        <div class="links">
+            <a href="about.html" class="btn btn-primary btn-lg me-2">About Us</a>
         <a href="activities.html" class="btn btn-outline-success btn-lg">Register Now</a>
+        </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
