@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COEA Navigation</title>
+    <title>NAS Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
  <style>
-/* Navbar background */
+
 *{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .navbar {
     background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255)); /* Deep blue color */
@@ -19,7 +22,7 @@
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #1E90FF !important;
+    color: var(--bs-primary);
 }
 
 /* Navbar links */
@@ -104,7 +107,7 @@ svg {
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="logo.png" style="height: 50px; width: 50px;" alt="">
-                NAS
+                NɅS
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,7 +119,7 @@ svg {
                         <a href="" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">Services</a>
@@ -133,19 +136,18 @@ svg {
             </div>
         </div>
     </nav>
-    <div class="row">
+    <div class="row " style="height: 85vh;">
        
         <div class="col-11 col-lg-7 mx-auto d-flex align-items-center justify-content-center flex-column">
-            <h1 class="display-1 fw-bold">NAS CLUB</h1>
             <div class="masking-container">
-    <h1 class="masked-text">NAS CLUB</h1>
+    <h1 class="masked-text">NɅS CLUB</h1>
     <style>
         
 .masked-text {
     font-size: 8rem;
     font-weight: bold;
     color: transparent;
-    background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa-mxF_NtOfF5Pcu05ZaLVuYrjmBL07lyK-A&s'); 
     background-size: 200%; /* Enlarged for smooth animation */
     background-position: 0 50%;
     background-clip: text;
@@ -170,6 +172,32 @@ svg {
             <a href="about.html" class="btn btn-primary btn-lg me-2">About Us</a>
         <a href="activities.html" class="btn btn-outline-success btn-lg">Register Now</a>
         </div>
+        </div>
+    </div>
+    <div class="row mt-5" id="about">
+        
+        <div class="col-11 col-lg-11 mb-3 mx-auto d-flex align-items-center justify-content-center border shadow flex-column p-3">
+            <h3>Mission</h3>
+            <p>The NAS Club empowers Computer Engineering students to gain hands-on experience in storage technologies and networking, fostering collaboration, innovation, and leadership to prepare them for future careers in IT and engineering</p>
+        </div>
+        <div class="col-11 col-lg-11 mb-3 mx-auto d-flex align-items-center justify-content-center border shadow flex-column p-3">
+            <h3>Vision</h3>
+            <p>To cultivate future-ready Computer Engineers by fostering knowledge and hands-on expertise in Network Attached Storage (NAS), networking, and data systems, empowering students to design, build, and manage innovative storage solutions for the digital age.</p>
+        </div>
+        <div class="col-11 col-lg-11 mb-3 mx-auto d-flex align-items-center justify-content-center border shadow flex-column p-3">
+            <h3>General Objectives</h3>
+            <p>The NAS Club is dedicated to foster technical growth and collaborative learning among Computer Engineering students through activities that combine theory with practical applications. In line with the vision and mission of the organization, the club aims to equip its members with essential skills in networking, data storage, and system administration while also contributing to the academic and community initiatives of the college. To achieve this, the NAS Club sets forth the following objectives:</p>
+            <ul>
+                <li>Conduct introductory workshops on the basics of NAS, networking, and data storage for all members.</li>
+                <li>Establish a functional NAS system within the club as a shared learning platform.</li>
+                <li>Organize monthly technical sessions where senior students mentor juniors on hardware, software, and system configuration.</li>
+                <li>Launch at least one major project showcasing the practical applications of NAS.</li>
+                <li>Design and maintain documentation and learning resources for continuity and knowledge transfer across year levels.</li>
+                <li>Participate in or prepare for CPE-related events, competitions, or research activities related to networking and storage.</li>
+                <li>Strengthen teamwork and leadership by assigning officer roles and project responsibilities to members from 1st to 4th year.</li>
+                <li>Actively participate in college research and extension projects, applying NAS-related knowledge and skills to academic and community initiatives.</li>
+                
+            </ul>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
