@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAS Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  <style>
 
 *{
@@ -13,23 +14,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+.article-intro::first-letter{
+     font-size: 2.5em; font-weight: bolder;
+     font-family: cursive;
+}
+
 .navbar {
     background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255)); /* Deep blue color */
-    padding: 1rem 1em;
+    padding: 1em;
 }
 
 /* Navbar brand */
 .navbar-brand {
     font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--bs-primary);
+    font-size: 1em;
+    color: #000;
 }
 
 /* Navbar links */
 .navbar-nav .nav-link {
     color: #000000 !important;
-    margin-right: 1rem;
-    font-size: 1rem;
+    margin-right: 1em;
+    font-size: 1em;
     position: relative; /* Needed for pseudo-element */
     transition: color 0.3s ease;
 }
@@ -66,13 +72,16 @@
 
 /* Toggler button (hamburger) color */
 .navbar-toggler {
-    border-color: #1E90FF;;
+    
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'
-        xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' 
-        stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("https://static.thenounproject.com/png/3889194-200.png");
+}
+.article-title{
+    border-bottom: 2px solid var(--bs-primary);
+    margin-bottom: 0px;
+    padding: 5px;
 }
 @keyframes bounce {
     0%, 100% {
@@ -83,10 +92,7 @@
     }
 }
 
-svg {
-    display: inline-block;
-    animation: bounce 2s ease-in-out infinite; /* Duration 2s, infinite loop */
-}
+
 
 /* Responsive spacing for nav items */
 @media (max-width: 992px) {
@@ -102,12 +108,11 @@ svg {
 
 
 </head>
-<body class="">
+<body class="bg-light">
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="logo.png" style="height: 50px; width: 50px;" alt="">
-                NɅS
+               PROJECT-ARAL:NɅS
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,6 +134,11 @@ svg {
                     </li>
                     
                     <li class="nav-item">
+                        <a href="" class="nav-link">News</a>
+                    </li>
+
+                    
+                    <li class="nav-item">
                        <a href="" class="nav-link">Login</a>
                     </li>
                     
@@ -138,7 +148,7 @@ svg {
     </nav>
     <div class="row " style="height: 85vh;">
        
-        <div class="col-11 col-lg-7 mx-auto d-flex align-items-center justify-content-center flex-column">
+        <div data-aos="fade-down" class="col-11 col-lg-7 mx-auto d-flex align-items-center justify-content-center flex-column">
             <div class="masking-container">
     <h1 class="masked-text">NɅS CLUB</h1>
     <style>
@@ -147,8 +157,8 @@ svg {
     font-size: 8rem;
     font-weight: bold;
     color: transparent;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa-mxF_NtOfF5Pcu05ZaLVuYrjmBL07lyK-A&s'); 
-    background-size: 200%; /* Enlarged for smooth animation */
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg'); 
+    background-size: 200%; 
     background-position: 0 50%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -170,23 +180,15 @@ svg {
         <p class="lead mb-4">Welcome to our official club page. Join us</p>
         <div class="links">
             <a href="about.html" class="btn btn-primary btn-lg me-2">About Us</a>
-        <a href="activities.html" class="btn btn-outline-success btn-lg">Register Now</a>
+        <a href="activities.html" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#reg_mdl">Register Now</a>
         </div>
         </div>
     </div>
     <div class="row mt-5" id="about">
         
-        <div class="col-11 col-lg-11 mb-3 mx-auto d-flex align-items-center justify-content-center border shadow flex-column p-3">
-            <h3>Mission</h3>
-            <p>The NAS Club empowers Computer Engineering students to gain hands-on experience in storage technologies and networking, fostering collaboration, innovation, and leadership to prepare them for future careers in IT and engineering</p>
-        </div>
-        <div class="col-11 col-lg-11 mb-3 mx-auto d-flex align-items-center justify-content-center border shadow flex-column p-3">
-            <h3>Vision</h3>
-            <p>To cultivate future-ready Computer Engineers by fostering knowledge and hands-on expertise in Network Attached Storage (NAS), networking, and data systems, empowering students to design, build, and manage innovative storage solutions for the digital age.</p>
-        </div>
-        <div class="col-11 col-lg-11 mb-3 mx-auto d-flex align-items-center justify-content-center border shadow flex-column p-3">
-            <h3>General Objectives</h3>
-            <p>The NAS Club is dedicated to foster technical growth and collaborative learning among Computer Engineering students through activities that combine theory with practical applications. In line with the vision and mission of the organization, the club aims to equip its members with essential skills in networking, data storage, and system administration while also contributing to the academic and community initiatives of the college. To achieve this, the NAS Club sets forth the following objectives:</p>
+        <div class="col-11 col-lg-7 mb-3 mx-auto d-flex align-items-center justify-content-center flex-column p-3">
+            <h3 class="article-title">General Objectives</h3>
+            <p class="article-intro">The NAS Club is dedicated to foster technical growth and collaborative learning among Computer Engineering students through activities that combine theory with practical applications. In line with the vision and mission of the organization, the club aims to equip its members with essential skills in networking, data storage, and system administration while also contributing to the academic and community initiatives of the college. To achieve this, the NAS Club sets forth the following objectives:</p>
             <ul>
                 <li>Conduct introductory workshops on the basics of NAS, networking, and data storage for all members.</li>
                 <li>Establish a functional NAS system within the club as a shared learning platform.</li>
@@ -199,7 +201,123 @@ svg {
                 
             </ul>
         </div>
+        <div class="col-11 col-lg-7 mb-3 mx-auto d-flex align-items-center justify-content-center flex-column p-3">
+            <h3 class="article-title">Mission</h3>
+            <p class="article-intro">The NAS Club empowers Computer Engineering students to gain hands-on experience in storage technologies and networking, fostering collaboration, innovation, and leadership to prepare them for future careers in IT and engineering</p>
+        </div>
+        <div class="col-11 col-lg-7 mb-3 mx-auto d-flex align-items-center justify-content-center flex-column p-3">
+            <h3 class="article-title">Vision</h3>
+            <p class="article-intro">To cultivate future-ready Computer Engineers by fostering knowledge and hands-on expertise in Network Attached Storage (NAS), networking, and data systems, empowering students to design, build, and manage innovative storage solutions for the digital age.</p>
+        </div>
     </div>
+    
+    <div
+        class="modal fade"
+        id="reg_mdl"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Register Form
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="formId1"
+                                id="formId1"
+                                placeholder=""
+                            />
+                            <label for="formId1">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="formId1"
+                                id="formId1"
+                                placeholder=""
+                            />
+                            <label for="formId1">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="formId1"
+                                id="formId1"
+                                placeholder=""
+                            />
+                            <label for="formId1">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="formId1"
+                                id="formId1"
+                                placeholder=""
+                            />
+                            <label for="formId1">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="formId1"
+                                id="formId1"
+                                placeholder=""
+                            />
+                            <label for="formId1">Reason</label>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var modalId = document.getElementById('modalId');
+    
+        modalId.addEventListener('show.bs.modal', function (event) {
+              // Button that triggered the modal
+              let button = event.relatedTarget;
+              // Extract info from data-bs-* attributes
+              let recipient = button.getAttribute('data-bs-whatever');
+    
+            // Use above variables to manipulate the DOM
+        });
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
