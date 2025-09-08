@@ -575,7 +575,7 @@
                     text += `<td class="text-center">${item.email}</td>`
                     text += `<td class="text-center">CPE-${item.year}${item.section}</td>`
                     text += `<td class="text-center">${item.datetime_registered}</td>`
-                    text += `<td class="text-center">${item.suggestions}</td>`
+                    text += `<td class="text-center">${item.suggestion}</td>`
 
 
 
