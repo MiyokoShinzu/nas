@@ -349,7 +349,7 @@
                 </span>
             </div>
 
-            <div class="col-10 col-lg-10 mx-auto ">
+            <div class="col-10 mt-3 col-lg-10 mx-auto ">
                 <div class="">
                     <table class="table table-hover" id="members_table">
                         <thead>
@@ -614,10 +614,7 @@
                 $('#members_table').DataTable({
                     dom: 'frBtip',
                     responsive: true,
-                    autoWidth: false, // prevent fixed widths
-                    initComplete: function() {
-                        this.api().columns.adjust().responsive.recalc();
-                    },
+                    
                     buttons: [
 
 
