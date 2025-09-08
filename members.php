@@ -331,10 +331,6 @@
                     }
                 </style>
             </div>
-
-
-        </div>
-        <div class="row mb-3 mt-3   shadow bg-white">
             <div class="col-11 col-lg-10  mx-auto mt-3 mb-3">
                 <h5 class="tentative text-center fw-bold border-bottom border-primary border-2 pb-2">Tentative Members of the Club</h5>
 
@@ -368,7 +364,9 @@
                     </table>
                 </div>
             </div>
+
         </div>
+
     </div>
 
 
@@ -614,7 +612,7 @@
                 $('#members_table').DataTable({
                     dom: 'frBtip',
                     responsive: true,
-                    
+
                     buttons: [
 
 
@@ -628,7 +626,7 @@
                     searching: true,
                     ordering: true,
                     scrollY: '300px',
-                    
+
                     scrollCollapse: true,
                     language: {
                         search: 'Search:'
