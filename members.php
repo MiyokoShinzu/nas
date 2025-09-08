@@ -14,340 +14,342 @@
         }
     </style>
     <!-- 🔹 First row with canvas background -->
-    <div class="row w-100 position-relative" style="height: 80vh; background: #fff; overflow: hidden;">
-        <!-- Canvas only inside this row -->
-        <canvas id="network-bg"></canvas>
+    <div class="container-fluid">
+        <div class="row w-100 position-relative" style="height: 80vh; background: #fff; overflow: hidden;">
+            <!-- Canvas only inside this row -->
+            <canvas id="network-bg"></canvas>
 
-        <div data-aos="fade-down" class="col-11 col-lg-10 mx-auto d-flex align-items-center justify-content-center flex-column position-relative" style="z-index: 1;">
-            <div class="wrapper">
-                <img class="mb-2 mx-3" src="./assets/csu.png" alt="" style="height: 50px; width: 50px; ">
-                <img class="mb-2 mx-3" src="./assets/coea.png" alt="" style="height: 50px; width: 50px;">
-                <img class="mb-2 mx-3" src="./assets/icpep.png" alt="" style="height: 50px; width: 50px; ">
+            <div data-aos="fade-down" class="col-11 col-lg-10 mx-auto d-flex align-items-center justify-content-center flex-column position-relative" style="z-index: 1;">
+                <div class="wrapper">
+                    <img class="mb-2 mx-3" src="./assets/csu.png" alt="" style="height: 50px; width: 50px; ">
+                    <img class="mb-2 mx-3" src="./assets/coea.png" alt="" style="height: 50px; width: 50px;">
+                    <img class="mb-2 mx-3" src="./assets/icpep.png" alt="" style="height: 50px; width: 50px; ">
+                </div>
+                <div class="masking-container text-center">
+                    <h1 class="masked-text">NɅS Club Members</h1>
+                    <style>
+                        .masked-text {
+                            font-size: 4rem;
+                            font-weight: bold;
+                            color: transparent;
+                            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
+                            background-size: 200%;
+                            background-position: 0 50%;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation: animate-background 5s infinite alternate linear;
+                        }
+
+                        @keyframes animate-background {
+                            0% {
+                                background-position: 0 50%;
+                            }
+
+                            100% {
+                                background-position: 100% 50%;
+                            }
+                        }
+                    </style>
+                </div>
+                <p class="text-center text-muted w-75">
+                    Introducing the NAS Club's diverse group of students, officers, and mentors united to learn, share, and grow together in technology and innovation.
+                </p>
             </div>
-            <div class="masking-container text-center">
-                <h1 class="masked-text">NɅS Club Members</h1>
+        </div>
+        <div class="row mt-3 w-100 mb-3">
+            <div class="col-lg-10  mx-auto text-center col-11 mb-5">
+                <span
+                    class="alert alert-primary fw-bold ">Officers of the NAS Club</span>
+
+            </div>
+            <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-right">
+                <div class="container1 ">
+                    <div class="card_box d-flex align-items-center justify-content-center flex-column border shadow">
+                        <img src="./assets/adviser.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
+                        <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Engr. Karl Stephen O. Evallo</p>
+                        <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
+                            <a href="https://web.facebook.com/evkarlstephen" class="sl">
+                                <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
+                            <a href="https://www.linkedin.com/in/evallokarlstephen/" class="sl">
+                                <img src="https://www.svgrepo.com/show/452047/linkedin-1.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
+                            <a href="https://ets-dev.com" class="sl">
+                                <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+
                 <style>
-                    .masked-text {
-                        font-size: 4rem;
-                        font-weight: bold;
-                        color: transparent;
-                        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
-                        background-size: 200%;
-                        background-position: 0 50%;
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        animation: animate-background 5s infinite alternate linear;
+                    /* From Uiverse.io by mrhyddenn */
+                    .container1 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
 
-                    @keyframes animate-background {
-                        0% {
-                            background-position: 0 50%;
-                        }
+                    .card_box {
+                        width: 300px;
+                        height: 250px;
+                        background: var(--bs-white);
+                        position: relative;
+                        /* box-shadow: 0 25px 50px rgba(3, 104, 141, 0.55); */
+                        cursor: pointer;
+                        transition: all .3s;
+                    }
 
-                        100% {
-                            background-position: 100% 50%;
-                        }
+                    .card_box:hover {
+                        transform: scale(0.9);
+                    }
+
+                    .card_box span {
+                        position: absolute;
+                        overflow: hidden;
+                        width: 150px;
+                        height: 150px;
+                        top: -10px;
+                        left: -10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .card_box span::before {
+                        content: 'Adviser';
+                        position: absolute;
+                        width: 150%;
+                        height: 40px;
+                        background-image: linear-gradient(45deg, #1d0ac8ff 0%, #ee07faff 51%, #e811b2ff 100%);
+                        transform: rotate(-45deg) translateY(-20px);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+                    }
+
+                    .card_box span::after {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        bottom: 0;
+                        left: 0;
+                        height: 10px;
+                        z-index: -1;
+                        box-shadow: 140px -140px #790586ff;
+                        background-image: linear-gradient(45deg, #114ae6ff 0%, #4019f0ff 51%, #ff4e2fff 100%);
                     }
                 </style>
             </div>
-            <p class="text-center text-muted w-75">
-                Introducing the NAS Club's diverse group of students, officers, and mentors united to learn, share, and grow together in technology and innovation.
-            </p>
-        </div>
-    </div>
-    <div class="row mt-3 w-100 mb-3">
-        <div class="col-lg-10  mx-auto text-center col-11 mb-5">
-            <span
-                class="alert alert-primary fw-bold ">Officers of the NAS Club</span>
 
-        </div>
-        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-right">
-            <div class="container1 ">
-                <div class="card_box d-flex align-items-center justify-content-center flex-column border shadow">
-                    <img src="./assets/adviser.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
-                    <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Engr. Karl Stephen O. Evallo</p>
-                    <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
-                        <a href="https://web.facebook.com/evkarlstephen" class="sl">
-                            <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
-                        <a href="https://www.linkedin.com/in/evallokarlstephen/" class="sl">
-                            <img src="https://www.svgrepo.com/show/452047/linkedin-1.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
-                        <a href="https://ets-dev.com" class="sl">
-                            <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
+
+            <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-down">
+                <div class="container2 ">
+                    <div class="card_box2 d-flex align-items-center justify-content-center flex-column border shadow">
+                        <img src="./assets/president.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
+                        <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Mr. Harvey Beldua</p>
+                        <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
+                            <a href="https://web.facebook.com/harvey.beldua" class="sl">
+                                <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
+
+                            <a href="https://belduaharvey.great-site.net/?i=1" class="sl">
+                                <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
+                        </div>
+                        <span></span>
                     </div>
-                    <span></span>
                 </div>
+
+                <style>
+                    /* From Uiverse.io by mrhyddenn */
+                    .container2 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .card_box2 {
+                        width: 300px;
+                        height: 250px;
+                        background: var(--bs-white);
+                        position: relative;
+                        /* box-shadow: 0 25px 50px rgba(3, 104, 141, 0.55); */
+                        cursor: pointer;
+                        transition: all .3s;
+                    }
+
+                    .card_box2:hover {
+                        transform: scale(0.9);
+                    }
+
+                    .card_box2 span {
+                        position: absolute;
+                        overflow: hidden;
+                        width: 150px;
+                        height: 150px;
+                        top: -10px;
+                        left: -10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .card_box2 span::before {
+                        content: 'President';
+                        position: absolute;
+                        width: 150%;
+                        height: 40px;
+                        background-image: linear-gradient(45deg, #1d0ac8ff 0%, #ee07faff 51%, #e811b2ff 100%);
+                        transform: rotate(-45deg) translateY(-20px);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+                    }
+
+                    .card_box2 span::after {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        bottom: 0;
+                        left: 0;
+                        height: 10px;
+                        z-index: -1;
+                        box-shadow: 140px -140px #790586ff;
+                        background-image: linear-gradient(45deg, #114ae6ff 0%, #4019f0ff 51%, #ff4e2fff 100%);
+                    }
+                </style>
             </div>
 
-            <style>
-                /* From Uiverse.io by mrhyddenn */
-                .container1 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+            <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-left">
+                <div class="container3 ">
+                    <div class="card_box3 d-flex align-items-center justify-content-center flex-column border shadow">
+                        <img src="./assets/vicepresident.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
+                        <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Ms. Precious Cauilan</p>
+                        <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
+                            <a href="https://web.facebook.com/its.sachiee" class="sl">
+                                <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
 
-                .card_box {
-                    width: 300px;
-                    height: 250px;
-                    background: var(--bs-white);
-                    position: relative;
-                    /* box-shadow: 0 25px 50px rgba(3, 104, 141, 0.55); */
-                    cursor: pointer;
-                    transition: all .3s;
-                }
-
-                .card_box:hover {
-                    transform: scale(0.9);
-                }
-
-                .card_box span {
-                    position: absolute;
-                    overflow: hidden;
-                    width: 150px;
-                    height: 150px;
-                    top: -10px;
-                    left: -10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .card_box span::before {
-                    content: 'Adviser';
-                    position: absolute;
-                    width: 150%;
-                    height: 40px;
-                    background-image: linear-gradient(45deg, #1d0ac8ff 0%, #ee07faff 51%, #e811b2ff 100%);
-                    transform: rotate(-45deg) translateY(-20px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #fff;
-                    font-weight: 600;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
-                }
-
-                .card_box span::after {
-                    content: '';
-                    position: absolute;
-                    width: 10px;
-                    bottom: 0;
-                    left: 0;
-                    height: 10px;
-                    z-index: -1;
-                    box-shadow: 140px -140px #790586ff;
-                    background-image: linear-gradient(45deg, #114ae6ff 0%, #4019f0ff 51%, #ff4e2fff 100%);
-                }
-            </style>
-        </div>
-
-
-        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-down">
-            <div class="container2 ">
-                <div class="card_box2 d-flex align-items-center justify-content-center flex-column border shadow">
-                    <img src="./assets/president.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
-                    <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Mr. Harvey Beldua</p>
-                    <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
-                        <a href="https://web.facebook.com/harvey.beldua" class="sl">
-                            <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
-
-                        <a href="https://belduaharvey.great-site.net/?i=1" class="sl">
-                            <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
+                            <a href="https://preciouscauilan.great-site.net/?i=1" class="sl">
+                                <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
+                            </a>
+                        </div>
+                        <span></span>
                     </div>
-                    <span></span>
                 </div>
+
+                <style>
+                    /* From Uiverse.io by mrhyddenn */
+                    .container3 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .card_box3 {
+                        width: 300px;
+                        height: 250px;
+                        background: var(--bs-white);
+                        position: relative;
+                        /* box-shadow: 0 25px 50px rgba(3, 104, 141, 0.55); */
+                        cursor: pointer;
+                        transition: all .3s;
+                    }
+
+                    .card_box3:hover {
+                        transform: scale(0.9);
+                    }
+
+                    .card_box3 span {
+                        position: absolute;
+                        overflow: hidden;
+                        width: 150px;
+                        height: 150px;
+                        top: -10px;
+                        left: -10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .card_box3 span::before {
+                        content: 'Secretary';
+                        position: absolute;
+                        width: 150%;
+                        height: 40px;
+                        background-image: linear-gradient(45deg, #1d0ac8ff 0%, #ee07faff 51%, #e811b2ff 100%);
+                        transform: rotate(-45deg) translateY(-20px);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+                    }
+
+                    .card_box3 span::after {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        bottom: 0;
+                        left: 0;
+                        height: 10px;
+                        z-index: -1;
+                        box-shadow: 140px -140px #790586ff;
+                        background-image: linear-gradient(45deg, #114ae6ff 0%, #4019f0ff 51%, #ff4e2fff 100%);
+                    }
+                </style>
             </div>
 
-            <style>
-                /* From Uiverse.io by mrhyddenn */
-                .container2 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
 
-                .card_box2 {
-                    width: 300px;
-                    height: 250px;
-                    background: var(--bs-white);
-                    position: relative;
-                    /* box-shadow: 0 25px 50px rgba(3, 104, 141, 0.55); */
-                    cursor: pointer;
-                    transition: all .3s;
-                }
-
-                .card_box2:hover {
-                    transform: scale(0.9);
-                }
-
-                .card_box2 span {
-                    position: absolute;
-                    overflow: hidden;
-                    width: 150px;
-                    height: 150px;
-                    top: -10px;
-                    left: -10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .card_box2 span::before {
-                    content: 'President';
-                    position: absolute;
-                    width: 150%;
-                    height: 40px;
-                    background-image: linear-gradient(45deg, #1d0ac8ff 0%, #ee07faff 51%, #e811b2ff 100%);
-                    transform: rotate(-45deg) translateY(-20px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #fff;
-                    font-weight: 600;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
-                }
-
-                .card_box2 span::after {
-                    content: '';
-                    position: absolute;
-                    width: 10px;
-                    bottom: 0;
-                    left: 0;
-                    height: 10px;
-                    z-index: -1;
-                    box-shadow: 140px -140px #790586ff;
-                    background-image: linear-gradient(45deg, #114ae6ff 0%, #4019f0ff 51%, #ff4e2fff 100%);
-                }
-            </style>
         </div>
+        <div class="row mb-3 mt-3  w-100 shadow bg-white p-3">
+            <div class="col-lg-10 col-11 mx-auto mt-3 mb-3">
+                <h5 class="tentative text-center fw-bold border-bottom border-primary border-2 pb-2">Tentative Members of the Club</h5>
 
-        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-left">
-            <div class="container3 ">
-                <div class="card_box3 d-flex align-items-center justify-content-center flex-column border shadow">
-                    <img src="./assets/vicepresident.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
-                    <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Ms. Precious Cauilan</p>
-                    <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
-                        <a href="https://web.facebook.com/its.sachiee" class="sl">
-                            <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
+            </div>
+            <div class="col-lg-10 mb-4 text-center mx-auto  mt-1">
+                <span class=" mb-2 mt-2 text-danger text-center">
+                    Tentative members are required to take an examination before initial orientation. The exam schedule and procedures will be posted later.
 
-                        <a href="https://preciouscauilan.great-site.net/?i=1" class="sl">
-                            <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
-                        </a>
-                    </div>
-                    <span></span>
-                </div>
+                    <span
+                        class="badge rounded-pill text-bg-danger text-white">Keep in touch and updated through our website!</span>
+
+                </span>
             </div>
 
-            <style>
-                /* From Uiverse.io by mrhyddenn */
-                .container3 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+            <div class="col-lg-10 mx-auto col-11">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="members_table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Full Name</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Email</th>
+                                <th class="text-center">Yr. Section</th>
+                                <th class="text-center">Datetime Pre-registered</th>
+                                <th class="text-center">S/C</th>
+                            </tr>
+                        </thead>
+                        <tbody id="members_table_data">
 
-                .card_box3 {
-                    width: 300px;
-                    height: 250px;
-                    background: var(--bs-white);
-                    position: relative;
-                    /* box-shadow: 0 25px 50px rgba(3, 104, 141, 0.55); */
-                    cursor: pointer;
-                    transition: all .3s;
-                }
-
-                .card_box3:hover {
-                    transform: scale(0.9);
-                }
-
-                .card_box3 span {
-                    position: absolute;
-                    overflow: hidden;
-                    width: 150px;
-                    height: 150px;
-                    top: -10px;
-                    left: -10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .card_box3 span::before {
-                    content: 'Secretary';
-                    position: absolute;
-                    width: 150%;
-                    height: 40px;
-                    background-image: linear-gradient(45deg, #1d0ac8ff 0%, #ee07faff 51%, #e811b2ff 100%);
-                    transform: rotate(-45deg) translateY(-20px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #fff;
-                    font-weight: 600;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
-                }
-
-                .card_box3 span::after {
-                    content: '';
-                    position: absolute;
-                    width: 10px;
-                    bottom: 0;
-                    left: 0;
-                    height: 10px;
-                    z-index: -1;
-                    box-shadow: 140px -140px #790586ff;
-                    background-image: linear-gradient(45deg, #114ae6ff 0%, #4019f0ff 51%, #ff4e2fff 100%);
-                }
-            </style>
-        </div>
-
-
-    </div>
-    <div class="row mb-3 mt-3  w-100 shadow bg-white p-3">
-        <div class="col-lg-10 col-11 mx-auto mt-3 mb-3">
-            <h5 class="tentative text-center fw-bold border-bottom border-primary border-2 pb-2">Tentative Members of the Club</h5>
-
-        </div>
-        <div class="col-lg-10 mb-4 text-center mx-auto  mt-1">
-            <span class=" mb-2 mt-2 text-danger text-center">
-                Tentative members are required to take an examination before initial orientation. The exam schedule and procedures will be posted later.
-
-                <span
-                    class="badge rounded-pill text-bg-danger text-white">Keep in touch and updated through our website!</span>
-
-            </span>
-        </div>
-
-        <div class="col-lg-10 mx-auto col-11">
-            <div class="table-responsive">
-                <table class="table table-hover" id="members_table">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Full Name</th>
-                            <th class="text-center">Status</th>
-                            <th class="text-center">Email</th>
-                            <th class="text-center">Yr. Section</th>
-                            <th class="text-center">Datetime Pre-registered</th>
-                            <th class="text-center">S/C</th>
-                        </tr>
-                    </thead>
-                    <tbody id="members_table_data">
-
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
