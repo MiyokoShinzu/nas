@@ -3,6 +3,12 @@
 <body class="bg-white">
     <?php include './globals/nav.php'; ?>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .sl {
             transition: all 0.3s ease;
         }
@@ -14,10 +20,10 @@
         }
     </style>
     <!-- 🔹 First row with canvas background -->
-    <div class="container-fluid">
-        <div class="row position-relative" style="height: 100vh; background: #fff; overflow: none;">
+    <div class="container-fluid d-flex align-items-center justify-content-center flex-column">
+        <div class="row" style="height: 100vh;background: #fff;  overflow: none;">
             <!-- Canvas only inside this row -->
-            <canvas id="network-bg"></canvas>
+            <canvas id="network-bg" class="w-100"></canvas>
 
             <div data-aos="fade-down" class="col-11 col-lg-10 mx-auto d-flex align-items-center justify-content-center flex-column position-relative" style="z-index: 1;">
                 <div class="wrapper d-flex align-items-center justify-content-around flex-row">
@@ -57,6 +63,11 @@
                 </p>
             </div>
         </div>
+
+
+
+
+
         <div class="row mt-3  mb-3">
             <div class="col-lg-10  mx-auto text-center col-11 mb-5">
                 <span
@@ -359,12 +370,21 @@
 
     <!-- 🔹 Canvas Styles -->
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
         #network-bg {
             position: absolute;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            /* replaces inset: 0 */
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
         }
     </style>
 
