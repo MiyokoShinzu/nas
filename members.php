@@ -341,6 +341,7 @@
                             <th class="text-center">Email</th>
                             <th class="text-center">Yr. Section</th>
                             <th class="text-center">Datetime Pre-registered</th>
+                            <th class="text-center">S/C</th>
                         </tr>
                     </thead>
                     <tbody id="members_table_data">
@@ -574,6 +575,7 @@
                     text += `<td class="text-center">${item.email}</td>`
                     text += `<td class="text-center">CPE-${item.year}${item.section}</td>`
                     text += `<td class="text-center">${item.datetime_registered}</td>`
+                    text += `<td class="text-center">${item.suggestions}</td>`
 
 
 
