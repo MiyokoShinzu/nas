@@ -47,6 +47,12 @@
                             animation: animate-background 5s infinite alternate linear;
                         }
 
+                        nav.navbar {
+                            position: relative;
+                            z-index: 10;
+                            /* above the canvas */
+                        }
+
                         @keyframes animate-background {
                             0% {
                                 background-position: 0 50%;
