@@ -15,7 +15,7 @@
     </style>
     <!-- 🔹 First row with canvas background -->
     <div class="container-fluid">
-        <div class="row position-relative" style="height: 75vh; background: #fff; overflow: none;">
+        <div class="row position-relative" style="height: 100vh; background: #fff; overflow: none;">
             <!-- Canvas only inside this row -->
             <canvas id="network-bg"></canvas>
 
@@ -29,7 +29,7 @@
                     <h1 class="masked-text">NɅS Club Members</h1>
                     <style>
                         .masked-text {
-                            font-size: 4rem;
+                            font-size: 4em;
                             font-weight: bold;
                             color: transparent;
                             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
