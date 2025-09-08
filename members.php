@@ -614,6 +614,10 @@
                 $('#members_table').DataTable({
                     dom: 'frBtip',
                     responsive: true,
+                    autoWidth: false, // prevent fixed widths
+                    initComplete: function() {
+                        this.api().columns.adjust().responsive.recalc();
+                    },
                     buttons: [
 
 
