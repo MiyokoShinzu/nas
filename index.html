@@ -202,39 +202,60 @@
         </div>
     </div>
     <div class="modal fade" id="reg_mdl" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Register Form</h5>
+                    <h5 class="modal-title" id="modalTitleId">Pre-registration Form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="formId1" id="formId1" placeholder=""/>
+                    <div class="container-fluid row">
+                        <div class="form-group mb-3 col-md-4">
                             <label for="formId1">First Name</label>
+                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="" required/ >
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="formId1" id="formId1" placeholder=""/>
+                        <div class="form-group mb-3 col-md-4">
+                            <label for="formId1">Middle Name</label>
+                            <input type="text" class="form-control" name="middlename" id="middlename" placeholder="" required/ >
+                        </div>
+                        <div class="form-group mb-3 col-md-4">
                             <label for="formId1">Last Name</label>
+                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="" required/ >
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="formId1" id="formId1" placeholder=""/>
-                            <label for="formId1">First Name</label>
+                        <div class="form-group mb-3 col-md-4">
+                            <label for="formId1">Suffix</label>
+                            <input type="text" class="form-control" name="suffix" id="suffix" placeholder="" / >
+                            <small style="font-size: 10px; color: red;">Leave blank if you do not have a name suffix (e.g., Jr., Sr., III)</small>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="formId1" id="formId1" placeholder=""/>
-                            <label for="formId1">First Name</label>
+                        <div class="form-group mb-3 col-md-4">
+                            <label for="formId1">Year</label>
+                            <select name="year" id="year" class="form-select" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="formId1" id="formId1" placeholder=""/>
-                            <label for="formId1">Reason</label>
+                        <div class="form-group mb-3 col-md-4">
+                            <label for="formId1">Section</label>
+                            <select name="section" id="section" class="form-select" required>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
                         </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Contribution/Suggestion</label>
+                            <textarea class="form-control" name="" id="" rows="3" placeholder="Enter here your possible contributions or suggestions to the club." required></textarea>
+                        </div>
+                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button  class="btn btn-primary" id="register_btn">Save</button>
                 </div>
             </div>
         </div>
@@ -253,6 +274,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         AOS.init();
     </script>
@@ -303,6 +325,69 @@ backToTopBtn.addEventListener("click", function () {
     behavior: "smooth"
   });
 });
+</script>
+
+<script>
+    function toast(message, bgCode) {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+    
+      const bgMap = {
+        1: 'bg-success',
+        2: 'bg-danger',
+        3: 'bg-warning',
+        4: 'bg-info'
+      };
+      const bgClass = bgMap[bgCode] || 'bg-secondary';
+    
+      const toastContainer = document.createElement('div');
+      toastContainer.className = 'position-fixed bottom-0 end-0 p-3';
+      toastContainer.style.zIndex = '9999';
+    
+      const toastHTML = `
+        <div class='toast align-items-center text-white ${bgClass} border-0' role='alert'>
+          <div class='d-flex'>
+            <div class='toast-body'>
+              ${message} at ${timeString}
+            </div>
+            <button type='button' class='btn-close btn-close-white me-2 m-auto' data-bs-dismiss='toast'></button>
+          </div>
+        </div>`;
+    
+      toastContainer.innerHTML = toastHTML;
+      document.body.appendChild(toastContainer);
+    
+      const toastEl = toastContainer.querySelector('.toast');
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    
+      toastEl.addEventListener('hidden.bs.toast', () => {
+        toastContainer.remove();
+      });
+    }
+</script>
+<script>
+    $(document).on('click', "#register_btn", function(){
+        var firstname = $("#firstname").val();
+        var middlename = $("#middlename").val();
+        var lastname = $("#lastname").val();
+        var suffix = $("#suffix").val();
+        var year = $("#year").val();
+        var section = $("#section").val();
+        if(firstname == "" || middlename == "" || lastname == ""  || year == "" || section == ""){
+            toast("Please fill out all the fields.", 2);
+            return;
+        }
+        else{
+            fetch(`url`)
+            .then(res => res.json())
+            .then(data => {
+              console.log(data);
+            })
+            .catch(err => console.error(err))
+        }
+        toast("Registered", 1);
+    })
 </script>
 </body>
 </html>
