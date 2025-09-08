@@ -62,7 +62,7 @@
                 class="alert alert-primary fw-bold ">Officers of the NAS Club</span>
 
         </div>
-        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-down">
+        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-right">
             <div class="container1 ">
                 <div class="card_box d-flex align-items-center justify-content-center flex-column border shadow">
                     <img src="./assets/adviser.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
@@ -231,7 +231,7 @@
             </style>
         </div>
 
-        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-down">
+        <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-left">
             <div class="container3 ">
                 <div class="card_box3 d-flex align-items-center justify-content-center flex-column border shadow">
                     <img src="./assets/vicepresident.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
