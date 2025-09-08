@@ -335,11 +335,11 @@
 
         </div>
         <div class="row mb-3 mt-3   shadow bg-white">
-            <div class="col-lg-10 col-11 mx-auto mt-3 mb-3">
+            <div class="col-11 col-lg-10  mx-auto mt-3 mb-3">
                 <h5 class="tentative text-center fw-bold border-bottom border-primary border-2 pb-2">Tentative Members of the Club</h5>
 
             </div>
-            <div class="col-lg-1 mb-4 text-center mx-auto  mt-1">
+            <div class="col-11 col-lg-10 mb-4 text-center mx-auto  mt-1">
                 <span class=" mb-2 mt-2 text-danger text-center">
                     Tentative members are required to take an examination before initial orientation. The exam schedule and procedures will be posted later.
 
@@ -349,7 +349,7 @@
                 </span>
             </div>
 
-            <div class="col-lg-10 mx-auto col-11">
+            <div class="col-11 col-lg-10 mx-auto ">
                 <div class="table-responsive">
                     <table class="table table-hover" id="members_table">
                         <thead>
