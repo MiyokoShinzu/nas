@@ -15,7 +15,7 @@
     </style>
     <!-- 🔹 First row with canvas background -->
     <div class="container-fluid">
-        <div class="row w-100 position-relative" style="height: 75vh; background: #fff; overflow: hidden;">
+        <div class="row position-relative" style="height: 75vh; background: #fff; overflow: hidden;">
             <!-- Canvas only inside this row -->
             <canvas id="network-bg"></canvas>
 
@@ -57,7 +57,7 @@
                 </p>
             </div>
         </div>
-        <div class="row mt-3 w-100 mb-3">
+        <div class="row mt-3  mb-3">
             <div class="col-lg-10  mx-auto text-center col-11 mb-5">
                 <span
                     class="alert alert-primary fw-bold ">Officers of the NAS Club</span>
@@ -317,7 +317,7 @@
 
 
         </div>
-        <div class="row mb-3 mt-3  w-100 shadow bg-white p-3">
+        <div class="row mb-3 mt-3   shadow bg-white p-3">
             <div class="col-lg-10 col-11 mx-auto mt-3 mb-3">
                 <h5 class="tentative text-center fw-bold border-bottom border-primary border-2 pb-2">Tentative Members of the Club</h5>
 
