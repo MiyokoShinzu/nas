@@ -15,7 +15,7 @@
     </style>
     <!-- 🔹 First row with canvas background -->
     <div class="container-fluid">
-        <div class="row position-relative" style="height: 75vh; background: #fff; overflow: hidden;">
+        <div class="row position-relative" style="height: 75vh; background: #fff; overflow: none;">
             <!-- Canvas only inside this row -->
             <canvas id="network-bg"></canvas>
 
