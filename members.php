@@ -52,7 +52,7 @@
                         }
                     </style>
                 </div>
-                <p class="text-center text-muted w-75">
+                <p class="text-center text-muted">
                     Introducing the NAS Club's diverse group of students, officers, and mentors united to learn, share, and grow together in technology and innovation.
                 </p>
             </div>
