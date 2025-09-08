@@ -349,8 +349,8 @@
                 </span>
             </div>
 
-            <div class="col-11 col-lg-10 mx-auto ">
-                <div class="table-responsive">
+            <div class="col-10 col-lg-10 mx-auto ">
+                <div class="">
                     <table class="table table-hover" id="members_table">
                         <thead>
                             <tr>
@@ -631,7 +631,7 @@
                     searching: true,
                     ordering: true,
                     scrollY: '300px',
-                    colReorder: true,
+                    
                     scrollCollapse: true,
                     language: {
                         search: 'Search:'
