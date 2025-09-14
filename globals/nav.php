@@ -20,6 +20,12 @@
                     <a href="members.php" class="nav-link">Members</a>
                 </li>
                 <li class="nav-item">
+                    <a href="announcements.php" class="nav-link">Announcements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="members.php" class="nav-link">Merchandise</a>
+                </li>
+                <li class="nav-item">
                     <a href="" class="nav-link">News</a>
                 </li>
                 <li class="nav-item">

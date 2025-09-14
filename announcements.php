@@ -25,17 +25,17 @@
             <!-- Canvas only inside this row -->
             <canvas id="network-bg" class="w-100"></canvas>
 
-            <div data-aos="fade-down" class="col-11 col-lg-10 mx-auto d-flex align-items-center justify-content-center flex-column position-relative" style="z-index: 1;">
+            <div data-aos="fade-down" class="col-11 col-lg-11 mx-auto d-flex align-items-center justify-content-center flex-column position-relative" style="z-index: 1;">
                 <div class="wrapper d-flex align-items-center justify-content-around flex-row">
                     <img class="mb-2 mx-3" src="./assets/csu.png" alt="" style="height: 50px; width: 50px; ">
                     <img class="mb-2 mx-3" src="./assets/coea.png" alt="" style="height: 50px; width: 50px;">
                     <img class="mb-2 mx-3" src="./assets/icpep.png" alt="" style="height: 50px; width: 50px; ">
                 </div>
                 <div class="masking-container text-center">
-                    <h1 class="masked-text">NɅS Members</h1>
+                    <h1 class="masked-text">NɅS Announcements</h1>
                     <style>
                         .masked-text {
-                            font-size: 4em;
+                            font-size: 3em;
                             font-weight: bold;
                             color: transparent;
                             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
@@ -65,8 +65,10 @@
                     </style>
                 </div>
                 <p class="text-center text-muted w-75">
-                    Introducing the NAS Club's diverse group of students, officers, and mentors united to learn, share, and grow together in technology and innovation.
+                    Welcome to the NAS Announcements page! Stay updated with the latest announcements, important updates, and upcoming events from our club here.
                 </p>
+
+
             </div>
         </div>
 
@@ -445,51 +447,6 @@
         </div>
 
     </div>
-    <?php include './globals/footer.php' ?>
-    <button id="backToTop" class="btn btn-primary">
-        ↑
-    </button>
-    <style>
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            /* hidden by default */
-            z-index: 999;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            text-align: center;
-            line-height: 1.2;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        #backToTop:hover {
-            background-color: #0a58ca;
-            /* darker blue */
-        }
-    </style>
-    <script>
-        const backToTopBtn = document.getElementById("backToTop");
-
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 200) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        });
-
-        backToTopBtn.addEventListener("click", function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
-
 
 
 

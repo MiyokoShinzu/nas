@@ -2,14 +2,20 @@
 
 <body class="bg-light">
     <?php include './globals/nav.php'; ?>
-    <div class="row " style="height: 85vh; background: #fff; overflow: hidden;">
+    <div class="row " style="height: 95vh; background: #fff; overflow: hidden;">
         <canvas id="network-bg"></canvas>
+
         <div data-aos="fade-down" class="col-11 col-lg-7 mx-auto d-flex align-items-center justify-content-center flex-column">
+            <div class="wrapper d-flex align-items-center justify-content-around flex-row">
+                <img class="mb-2 mx-3" src="./assets/csu.png" alt="" style="height: 50px; width: 50px; ">
+                <img class="mb-2 mx-3" src="./assets/coea.png" alt="" style="height: 50px; width: 50px;">
+                <img class="mb-2 mx-3" src="./assets/icpep.png" alt="" style="height: 50px; width: 50px; ">
+            </div>
             <div class="masking-container text-center">
                 <h1 class="masked-text">NɅS CLUB</h1>
                 <style>
                     .masked-text {
-                        font-size: 8rem;
+                        font-size: 5rem;
                         font-weight: bold;
                         color: transparent;
                         background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
@@ -80,28 +86,10 @@
             <p class="article-intro">To cultivate future-ready Computer Engineers by fostering knowledge and hands-on expertise in Network Attached Storage (NAS), networking, and data systems, empowering students to design, build, and manage innovative storage solutions for the digital age.</p>
         </div>
     </div>
-    <div class="row mt-5 bg-light text-dark" id="footer">
-        <div class="col-lg-12">
-
-        </div>
-        <div class="row col-lg-7 col-12 mx-auto p-3 d-flex align-items-center justify-content-center">
-            <div class="col-md-4" style="display: flex; align-items: center; justify-content: center; flex-direction: column">
-                <img class="mb-2" src="./assets/csu.png" alt="" style="height: 100px; width: 100px; ">
-                <p class="border-bottom border-primary border-2 text-center pb-2">Cagayan State University Carig Campus</p>
-            </div>
-            <div class="col-md-4" style="display: flex; align-items: center; justify-content: center; flex-direction: column">
-                <img class="mb-2" src="./assets/coea.png" alt="" style="height: 100px; width: 100px;">
-                <p class="border-bottom border-primary border-2 text-center pb-2">College of Engineering and Architecture</p>
-            </div>
-
-            <div class="col-md-4" style="display: flex; align-items: center; justify-content: center; flex-direction: column">
-                <img class="mb-2" src="./assets/icpep.png" alt="" style="height: 100px; width: 100px; ">
-                <p class="border-bottom border-primary border-2 text-center pb-2">Institute of Computer Engineers of the Philippines</p>
-            </div>
-        </div>
-    </div>
+    
     <style>
-        .form-control, .form-select {
+        .form-control,
+        .form-select {
             color: var(--bs-purple)
         }
 
@@ -188,7 +176,7 @@
             </div>
         </div>
     </div>
-
+    <?php  include'./globals/footer.php'?>
     <button id="backToTop" class="btn btn-primary">
         ↑
     </button>
@@ -321,10 +309,10 @@
                             // Delay in milliseconds
                             const delay = 2000; // Change this value or pass it dynamically
                             setTimeout(() => {
-                              // Action to perform after delay
-                              location.reload();
+                                // Action to perform after delay
+                                location.reload();
                             }, delay);
-                          
+
                         }
                     })
                     .catch(err => console.error(err))

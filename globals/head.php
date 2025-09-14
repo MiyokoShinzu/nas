@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAS Home</title>
+    <title>NAS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-2.0.8/af-2.7.0/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/cr-2.0.3/date-1.5.2/fc-5.0.1/fh-4.0.1/kt-2.12.1/r-3.0.2/rg-1.5.0/rr-1.5.0/sc-2.4.3/sb-1.7.1/sp-2.3.1/sl-2.0.3/sr-1.4.1/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <style>
         * {
             font-family: Arial, Helvetica, sans-serif;
@@ -16,11 +17,15 @@
             padding: 0;
             box-sizing: border-box;
         }
+        body{
+            overflow-x: hidden;
+        }
 
         .article-intro::first-letter {
             font-size: 2.5em;
             font-weight: bolder;
-            color: var(--bs-purple);
+            color: var(--bs-primary);
+            font-family: cursive;
         }
 
         .navbar {
@@ -168,6 +173,28 @@
                 margin-top: -9px;
             } */ */
         
+    </style>
+    <style>
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            /* hidden by default */
+            z-index: 999;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 1.2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTop:hover {
+            background-color: #0a58ca;
+            /* darker blue */
+        }
     </style>
     
 </head>
