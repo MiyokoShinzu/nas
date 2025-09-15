@@ -425,23 +425,25 @@
 
 
     </div>
-    <div class="row">
+    <div class="row w-100">
         <div class="col-11 border col-lg-10 mx-auto">
-            <table class="" id="members_table">
-                <thead>
-                    <tr>
-                        <th class="text-center">Full Name</th>
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Email</th>
-                        <th class="text-center">Yr. Section</th>
-                        <th class="text-center">Datetime Pre-registered</th>
-                        <th class="text-center">S/C</th>
-                    </tr>
-                </thead>
-                <tbody id="members_table_data">
+            <div class="table-responsive">
+                <table class="" id="members_table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Full Name</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">Yr. Section</th>
+                            <th class="text-center">Datetime Pre-registered</th>
+                            <th class="text-center">S/C</th>
+                        </tr>
+                    </thead>
+                    <tbody id="members_table_data">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
