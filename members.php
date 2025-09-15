@@ -422,7 +422,7 @@
                 </span>
             </div>
 
-            <div class="col-10 mt-3 col-lg-8 mx-auto ">
+            <div class="col-2 mt-3 col-lg-8 mx-auto ">
 
                 <div class="table-responsive">
                     <table class="table table-hover" id="members_table">
