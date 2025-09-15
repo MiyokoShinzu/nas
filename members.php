@@ -421,8 +421,8 @@
                 </span>
             </div>
             <div class="row">
-                <div class="col-8 border col-lg-10 mx-auto">
-                    <table class="table table-hover" id="members_table">
+                <div class="col-6 border col-lg-10 mx-auto">
+                    <table class="" id="members_table">
                         <thead>
                             <tr>
                                 <th class="text-center">Full Name</th>
