@@ -425,7 +425,7 @@
 
 
     </div>
-    <div class="row w-100">
+    <div class="row w-100 mx-auto">
         <div class="col-11 border col-lg-10 mx-auto">
             <div class="table-responsive">
                 <table class="" id="members_table">
@@ -739,6 +739,7 @@
                 $('#members_table_data').html(text)
                 $('#members_table').DataTable({
                     dom: 'frtip',
+                    responsive: true
 
                 });
             })
