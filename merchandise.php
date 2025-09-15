@@ -32,10 +32,10 @@
                     <img class="mb-2 mx-3" src="./assets/icpep.png" alt="" style="height: 50px; width: 50px; ">
                 </div>
                 <div class="masking-container text-center">
-                    <h1 class="masked-text">NɅS Announcements</h1>
+                    <h1 class="masked-text">NɅS Merchandise</h1>
                     <style>
                         .masked-text {
-                            font-size: 2em;
+                            font-size: 3em;
                             font-weight: bold;
                             color: transparent;
                             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
@@ -65,8 +65,7 @@
                     </style>
                 </div>
                 <p class="text-center text-muted w-75">
-                    Welcome to the NAS Announcements page! Stay updated with the latest announcements, important updates, and upcoming events from our club here.
-                </p>
+                    Show your pride and support for the club with our exclusive merchandise. From comfortable apparel to useful accessories, explore items designed to represent our community and spirit. Every purchase helps support our projects and activities! </p>
 
 
             </div>
@@ -76,7 +75,7 @@
 
 
 
-     
+
     </div>
 
 
@@ -294,7 +293,7 @@
     <script>
         AOS.init();
     </script>
-    
+
 
 </body>
 

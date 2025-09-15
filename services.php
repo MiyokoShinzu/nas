@@ -32,10 +32,10 @@
                     <img class="mb-2 mx-3" src="./assets/icpep.png" alt="" style="height: 50px; width: 50px; ">
                 </div>
                 <div class="masking-container text-center">
-                    <h1 class="masked-text">NɅS Announcements</h1>
+                    <h1 class="masked-text">NɅS Services</h1>
                     <style>
                         .masked-text {
-                            font-size: 2em;
+                            font-size: 3em;
                             font-weight: bold;
                             color: transparent;
                             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
@@ -65,8 +65,7 @@
                     </style>
                 </div>
                 <p class="text-center text-muted w-75">
-                    Welcome to the NAS Announcements page! Stay updated with the latest announcements, important updates, and upcoming events from our club here.
-                </p>
+                    Discover the range of services our club offers to support members, enhance learning, and build a stronger community. From academic assistance and technical workshops to community outreach and collaborative projects, you’ll find all the ways we can help and grow together here. </p>
 
 
             </div>
@@ -76,7 +75,7 @@
 
 
 
-     
+
     </div>
 
 
@@ -294,7 +293,7 @@
     <script>
         AOS.init();
     </script>
-    
+
 
 </body>
 
