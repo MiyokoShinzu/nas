@@ -424,21 +424,23 @@
 
             <div class="col-10 mt-3 col-lg-8 mx-auto ">
 
-                <table class="table table-hover" id="members_table">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Full Name</th>
-                            <th class="text-center">Status</th>
-                            <th class="text-center">Email</th>
-                            <th class="text-center">Yr. Section</th>
-                            <th class="text-center">Datetime Pre-registered</th>
-                            <th class="text-center">S/C</th>
-                        </tr>
-                    </thead>
-                    <tbody id="members_table_data">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="members_table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Full Name</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Email</th>
+                                <th class="text-center">Yr. Section</th>
+                                <th class="text-center">Datetime Pre-registered</th>
+                                <th class="text-center">S/C</th>
+                            </tr>
+                        </thead>
+                        <tbody id="members_table_data">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
 
