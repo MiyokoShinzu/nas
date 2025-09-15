@@ -35,7 +35,7 @@
                     <h1 class="masked-text">NɅS Announcements</h1>
                     <style>
                         .masked-text {
-                            font-size: 3em;
+                            font-size: 2em;
                             font-weight: bold;
                             color: transparent;
                             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/446/303/small/technology-abstract-lines-and-dots-connection-background-connection-digital-data-and-big-data-concept-network-connection-dots-and-lines-futuristic-background-illustration-vector.jpg');
