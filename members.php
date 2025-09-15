@@ -333,14 +333,14 @@
             <div class="col-11 col-lg-4 mx-auto d-flex align-items-center justify-content-center mb-5" data-aos="fade-left">
                 <div class="container4 ">
                     <div class="card_box4 d-flex align-items-center justify-content-center flex-column border shadow">
-                        <img src="./assets/vicepresident.jpg" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
+                        <img src="https://scontent.fcrk9-1.fna.fbcdn.net/v/t39.30808-6/546558241_920210797366184_1434594155260186242_n.jpg?stp=c0.169.1536.1536a_cp6_dst-jpg_s206x206_tt6&_nc_cat=109&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeEQ-7eJ_bbHn9VmWFqakIiWAB50qtqeNzoAHnSq2p43Ogw0_nboNtMCP5Z7TF_2fbiBs_8iUCLO_5qm4lsSyvag&_nc_ohc=Pb2M_h19Q4cQ7kNvwFtE-6D&_nc_oc=AdlQ-QzkG9z4tHOgPDXZSa7NrGeDDJrd3ll6TsZwPFpssfbYSLnOHqrXmpY4JB6N__ZOMWB6ZCum4AN2drW2YVJW&_nc_zt=23&_nc_ht=scontent.fcrk9-1.fna&_nc_gid=cIHSXtGqHaRfDc-2Dk_t4A&oh=00_AfaOFo41dV4Rlqx39kAxC1vVpSengMZ3W5Yv847DoJDgtQ&oe=68CD39D1" class="mb-3" style="height: 120px; width: 120px; border-radius: 50%;" alt="">
                         <p class="text-dark text-center fw-bold border-bottom border-2 border-primary" style="">Ms. Lavea Angela</p>
                         <div class="social-links d-flex align-items-center justify-content-center gap-3 mb-3">
-                            <a href="https://web.facebook.com/its.sachiee" class="sl">
+                            <a href="https://web.facebook.com/gela.1215" class="sl">
                                 <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" style="height: 30px; width: 30px;" alt="">
                             </a>
 
-                            <a href="https://preciouscauilan.great-site.net/?i=1" class="sl">
+                            <a href="https://web.facebook.com/gela.1215" class="sl">
                                 <img src="https://www.svgrepo.com/show/231180/mail.svg" style="height: 30px; width: 30px;" alt="">
                             </a>
                         </div>
@@ -750,6 +750,7 @@
                     searching: true,
                     ordering: true,
                     scrollY: '300px',
+                    responsive: true,
 
                     scrollCollapse: true,
                     language: {
