@@ -718,6 +718,8 @@
                     text += `<tr>`
                     if (item.status == 1) {
                         s = ' <span class = "badge rounded-pill text-white text-bg-success" > Approved </span > '
+                    } else if (item.status == 4) {
+                        s = ' <span class = "badge rounded-pill text-white text-bg-danger" > Review for the exam this week</span > '
                     } else {
                         s = ' <span class = "badge rounded-pill text-white text-bg-warning" > Pending </span > '
                     }
