@@ -421,7 +421,7 @@
                 </span>
             </div>
             <div class="row">
-                <div class="col-10 col-lg-10 mx-auto">
+                <div class="col-10 border col-lg-10 mx-auto">
                     <table class="table table-hover" id="members_table">
                         <thead>
                             <tr>
