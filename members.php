@@ -415,13 +415,13 @@
             <div class="col-11 col-lg-10  mx-auto mt-3 mb-3">
                 <h5 class="tentative text-center fw-bold border-bottom border-primary border-2 pb-2">Tentative Members of the Club</h5>
             </div>
-            <div class="col-9 col-lg-8 mb-4 text-center mx-auto  mt-1">
-                <span class=" mb-2 mt-2 text-danger text-center">
+            <div class="col-11 col-lg-8 mb-4 text-center mx-auto  mt-1">
+                <span class=" w-100 mb-2 mt-2 text-danger text-center">
                     Tentative members are required to take an examination before initial orientation. The exam schedule and procedures will be posted later.
                 </span>
             </div>
             <div class="row">
-                <div class="col-6 border col-lg-10 mx-auto">
+                <div class="col-11 border col-lg-10 mx-auto">
                     <table class="" id="members_table">
                         <thead>
                             <tr>
@@ -735,28 +735,8 @@
                 })
                 $('#members_table_data').html(text)
                 $('#members_table').DataTable({
-                    dom: 'frBtip',
-                    responsive: true,
-
-                    buttons: [
-
-
-                        {
-                            extend: 'colvis',
-                            text: 'Show/Hide Columns'
-                        }
-                    ],
-                    fixedHeader: true,
-                    paging: true,
-                    searching: true,
-                    ordering: true,
-                    scrollY: '300px',
-                    responsive: true,
-
-                    scrollCollapse: true,
-                    language: {
-                        search: 'Search:'
-                    }
+                    dom: 'frtip',
+                    
                 });
             })
             .catch(err => console.error(err))
