@@ -99,8 +99,8 @@ h1 .nas{color:var(--blue2)}
  <main class="hero-main">
   <div class="copy">
    <div class="eyebrow"><span class="pulse"></span> ICPEP.SE · CSU Carig Campus</div>
-   <h1>Connect with<br><span class="nas">NAS</span></h1>
-   <p class="tagline">Build the network,<span>Protect the future.</span></p>
+   <h1>Connect with<br><span class="nas">NAS.</span></h1>
+   <p class="tagline">Build the network,<br><span>Protect the future.</span></p>
    <p class="support">A community for future computer engineers passionate about networking, infrastructure, and cybersecurity.</p>
    <div class="hero-actions">
     <a class="login large" href="login.php">Enter the network <i class="bi bi-arrow-up-right"></i></a>
@@ -109,7 +109,7 @@ h1 .nas{color:var(--blue2)}
   </div>
  </main>
 
- <div class="network-hint"></div>
+ <div class="network-hint">Binary data in motion · max 3 links per node</div>
  <div class="bottom-note">
   <div class="left"><i class="bi bi-diagram-3-fill"></i> <span>ICPEP.SE Organization · Cagayan State University, Carig Campus</span></div>
   <div class="right">College of Engineering and Architecture / Computer Engineering</div>
@@ -142,7 +142,7 @@ toggle.addEventListener('click',()=>{
 (()=>{
  const canvas=document.getElementById('networkCanvas'),ctx=canvas.getContext('2d');
  const reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- let w=0,h=0,dpr=1,nodes=[],frame=0,last=0;
+ let w=0,h=0,dpr=1,nodes=[],objects3D=[],frame=0,last=0;
  // Keep the network alive even when reduced motion is enabled, but slow it down.
  const motionScale=reduced ? 0.45 : 1;
  const MAX_LINKS=3;
@@ -152,6 +152,13 @@ toggle.addEventListener('click',()=>{
   canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
   const count=Math.max(28,Math.min(78,Math.round(w/17)));
   nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.48,.48),vy:random(-.40,.40),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
+  // Floating 3D-style wireframe objects add depth behind the network.
+  objects3D=Array.from({length:Math.max(7,Math.min(13,Math.round(w/115)))},(_,i)=>({
+   x:random(35,Math.max(36,w-35)),y:random(80,Math.max(81,h-55)),size:random(13,31),
+   type:i%3,rx:random(0,6.28),ry:random(0,6.28),rz:random(0,6.28),
+   vx:random(-.003,.003),vy:random(-.004,.004),vz:random(-.002,.002),
+   driftX:random(-.12,.12),driftY:random(-.1,.1),phase:random(0,6.28),depth:random(.45,1)
+  }));
   for(let i=0;i<nodes.length;i++){
    const nearest=nodes.map((n,j)=>({j,d:Math.hypot(n.x-nodes[i].x,n.y-nodes[i].y)})).filter(v=>v.j!==i).sort((a,b)=>a.d-b.d);
    for(const c of nearest){
@@ -162,12 +169,57 @@ toggle.addEventListener('click',()=>{
    }
   }
  }
+ function draw3DObjects(t,blue,cyan,dt){
+  const dark=root.dataset.theme==='dark';
+  objects3D.forEach((o,index)=>{
+   o.rx+=o.vx*dt*motionScale;o.ry+=o.vy*dt*motionScale;o.rz+=o.vz*dt*motionScale;
+   o.x+=o.driftX*dt*motionScale;o.y+=o.driftY*dt*motionScale;
+   if(o.x < -o.size*2)o.x=w+o.size;if(o.x>w+o.size*2)o.x=-o.size;
+   if(o.y < -o.size*2)o.y=h+o.size;if(o.y>h+o.size*2)o.y=-o.size;
+   const alpha=(dark?.18:.13)*o.depth;
+   const c=index%2===0?blue:cyan;
+   ctx.save();ctx.translate(o.x,o.y);
+   if(o.type===0){
+    // Rotating wireframe cube, projected with perspective.
+    const vertices=[];
+    for(let x of [-1,1])for(let y of [-1,1])for(let z of [-1,1]){
+     let X=x*o.size,Y=y*o.size,Z=z*o.size;
+     let y1=Y*Math.cos(o.rx)-Z*Math.sin(o.rx),z1=Y*Math.sin(o.rx)+Z*Math.cos(o.rx);
+     let x2=X*Math.cos(o.ry)+z1*Math.sin(o.ry),z2=-X*Math.sin(o.ry)+z1*Math.cos(o.ry);
+     let x3=x2*Math.cos(o.rz)-y1*Math.sin(o.rz),y3=x2*Math.sin(o.rz)+y1*Math.cos(o.rz);
+     const perspective=150/(150+z2);
+     vertices.push({x:x3*perspective,y:y3*perspective,z:z2});
+    }
+    const edges=[[0,1],[0,2],[0,4],[1,3],[1,5],[2,3],[2,6],[3,7],[4,5],[4,6],[5,7],[6,7]];
+    ctx.strokeStyle=`rgba(${c},${alpha})`;ctx.lineWidth=1;
+    edges.forEach(([a,b])=>{ctx.beginPath();ctx.moveTo(vertices[a].x,vertices[a].y);ctx.lineTo(vertices[b].x,vertices[b].y);ctx.stroke();});
+   }else if(o.type===1){
+    // Orb with rotating latitude/longitude rings.
+    ctx.rotate(o.rz);
+    ctx.strokeStyle=`rgba(${c},${alpha})`;ctx.lineWidth=1;
+    for(let k=0;k<3;k++){
+     ctx.save();ctx.rotate(o.rx+k*Math.PI/3);
+     ctx.beginPath();ctx.ellipse(0,0,o.size,o.size*(.25+.12*Math.abs(Math.sin(o.ry+k))),o.ry,0,Math.PI*2);ctx.stroke();ctx.restore();
+    }
+    ctx.beginPath();ctx.arc(0,0,o.size,0,Math.PI*2);ctx.stroke();
+   }else{
+    // Floating 3D octahedron / diamond.
+    const s=o.size,verts=[{x:0,y:-s},{x:s*.72,y:0},{x:0,y:s},{x:-s*.72,y:0},{x:0,y:0}];
+    ctx.rotate(o.ry);ctx.strokeStyle=`rgba(${c},${alpha})`;ctx.lineWidth=1;
+    [[0,1],[1,2],[2,3],[3,0],[0,4],[1,4],[2,4],[3,4]].forEach(([a,b])=>{ctx.beginPath();ctx.moveTo(verts[a].x,verts[a].y);ctx.lineTo(verts[b].x,verts[b].y);ctx.stroke();});
+   }
+   // Soft center point gives each object a subtle glassy depth cue.
+   ctx.beginPath();ctx.arc(0,0,2,0,Math.PI*2);ctx.fillStyle=`rgba(${cyan},${alpha*1.5})`;ctx.fill();
+   ctx.restore();
+  });
+ }
  function paint(t){
   ctx.clearRect(0,0,w,h);
   const dark=root.dataset.theme==='dark';
   const blue=dark?'102,166,255':'35,107,232';
   const cyan=dark?'86,212,221':'8,158,174';
   const dt=last?Math.min(2,(t-last)/16.67):1;last=t;
+  draw3DObjects(t,blue,cyan,dt);
   {
    for(const n of nodes){
     n.x+=n.vx*dt*motionScale;n.y+=n.vy*dt*motionScale;n.phase+=.018*dt*motionScale;
