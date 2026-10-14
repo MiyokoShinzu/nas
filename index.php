@@ -141,15 +141,17 @@ toggle.addEventListener('click',()=>{
 // and every node is limited to three connections maximum.
 (()=>{
  const canvas=document.getElementById('networkCanvas'),ctx=canvas.getContext('2d');
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  let w=0,h=0,dpr=1,nodes=[],frame=0,last=0;
+ // Keep the network alive even when reduced motion is enabled, but slow it down.
+ const motionScale=reduced ? 0.45 : 1;
  const MAX_LINKS=3;
  const random=(min,max)=>min+Math.random()*(max-min);
  function resize(){
   const r=canvas.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(window.devicePixelRatio||1,2);
   canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
   const count=Math.max(28,Math.min(78,Math.round(w/17)));
-  nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.12,.12),vy:random(-.10,.10),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
+  nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.30,.30),vy:random(-.25,.25),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
   for(let i=0;i<nodes.length;i++){
    const nearest=nodes.map((n,j)=>({j,d:Math.hypot(n.x-nodes[i].x,n.y-nodes[i].y)})).filter(v=>v.j!==i).sort((a,b)=>a.d-b.d);
    for(const c of nearest){
@@ -167,9 +169,9 @@ toggle.addEventListener('click',()=>{
   const blue=dark?'102,166,255':'35,107,232';
   const cyan=dark?'86,212,221':'8,158,174';
   const dt=last?Math.min(2,(t-last)/16.67):1;last=t;
-  if(!reduced){
+  {
    for(const n of nodes){
-    n.x+=n.vx*dt;n.y+=n.vy*dt;n.phase+=.012*dt;
+    n.x+=n.vx*dt*motionScale;n.y+=n.vy*dt*motionScale;n.phase+=.018*dt*motionScale;
     if(n.x<0||n.x>w)n.vx*=-1;if(n.y<0||n.y>h)n.vy*=-1;
    }
    // Connections disappear when nodes drift apart.
@@ -204,9 +206,9 @@ toggle.addEventListener('click',()=>{
     ctx.strokeStyle=`rgba(${blue},${alpha})`;ctx.lineWidth=.7+Math.min(a.z,b.z)*.75;ctx.stroke();
     if(alpha>.12){
      // Two binary packets travel along each link at a calm, varied speed.
-     const elapsed=t*.00016 + (i*0.173+j*0.071);
+     const elapsed=t*.00030*motionScale + (i*0.173+j*0.071);
      const progress=((elapsed%1)+1)%1;
-     const reverse=((elapsed*.73+.43)%1+1)%1;
+     const reverse=((elapsed*.81+.43)%1+1)%1;
      const packets=[{p:progress,bit:((i+j)%2?'1':'0')},{p:reverse,bit:((i*j+1)%2?'0':'1')}];
      packets.forEach((packet,k)=>{
        const px=a.x+(b.x-a.x)*packet.p,py=a.y+(b.y-a.y)*packet.p;
@@ -220,7 +222,7 @@ toggle.addEventListener('click',()=>{
        ctx.restore();
      });
      // Small travelling signal glow behind the binary data.
-     const pulse=(Math.sin(t*.001+i+j)+1)/2;
+     const pulse=(Math.sin(t*.0015*motionScale+i+j)+1)/2;
      ctx.beginPath();ctx.arc(a.x+(b.x-a.x)*pulse,a.y+(b.y-a.y)*pulse,1.3,0,Math.PI*2);
      ctx.fillStyle=`rgba(${cyan},${alpha*.7})`;ctx.fill();
     }
@@ -233,12 +235,13 @@ toggle.addEventListener('click',()=>{
    ctx.beginPath();ctx.arc(n.x,n.y,radius+3,0,Math.PI*2);
    ctx.strokeStyle=`rgba(${blue},${.05+n.z*.09})`;ctx.lineWidth=1;ctx.stroke();
   }
-  if(!reduced)frame=requestAnimationFrame(paint);
+  frame=requestAnimationFrame(paint);
  }
- const ro=new ResizeObserver(()=>{cancelAnimationFrame(frame);last=0;resize();if(!reduced)frame=requestAnimationFrame(paint);});
- ro.observe(canvas);
- document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(frame);else if(!reduced){last=0;frame=requestAnimationFrame(paint);}});
- resize();if(!reduced)frame=requestAnimationFrame(paint);
+ function handleResize(){cancelAnimationFrame(frame);last=0;resize();frame=requestAnimationFrame(paint);}
+ if('ResizeObserver' in window){const ro=new ResizeObserver(handleResize);ro.observe(canvas);}
+ else{window.addEventListener('resize',handleResize,{passive:true});}
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(frame);else{last=0;frame=requestAnimationFrame(paint);}});
+ resize();frame=requestAnimationFrame(paint);
 })();
 </script>
 </body>
