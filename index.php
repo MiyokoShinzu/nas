@@ -99,7 +99,7 @@ h1 .nas{color:var(--blue2)}
  <main class="hero-main">
   <div class="copy">
    <div class="eyebrow"><span class="pulse"></span> ICPEP.SE · CSU Carig Campus</div>
-   <h1>Connect with<br><span class="nas">NAS.</span></h1>
+   <h1>Connect with<br><span class="nas">NAS</span></h1>
    <p class="tagline">Build the network,<span>Protect the future.</span></p>
    <p class="support">A community for future computer engineers passionate about networking, infrastructure, and cybersecurity.</p>
    <div class="hero-actions">
