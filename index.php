@@ -109,7 +109,7 @@ h1 .nas{color:var(--blue2)}
   </div>
  </main>
 
- <div class="network-hint">Dynamic network topology · max 3 links per node</div>
+ <div class="network-hint">Binary data in motion · max 3 links per node</div>
  <div class="bottom-note">
   <div class="left"><i class="bi bi-diagram-3-fill"></i> <span>ICPEP.SE Organization · Cagayan State University, Carig Campus</span></div>
   <div class="right">College of Engineering and Architecture / Computer Engineering</div>
@@ -149,7 +149,7 @@ toggle.addEventListener('click',()=>{
   const r=canvas.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(window.devicePixelRatio||1,2);
   canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
   const count=Math.max(28,Math.min(78,Math.round(w/17)));
-  nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.22,.22),vy:random(-.18,.18),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
+  nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.12,.12),vy:random(-.10,.10),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
   for(let i=0;i<nodes.length;i++){
    const nearest=nodes.map((n,j)=>({j,d:Math.hypot(n.x-nodes[i].x,n.y-nodes[i].y)})).filter(v=>v.j!==i).sort((a,b)=>a.d-b.d);
    for(const c of nearest){
@@ -199,12 +199,30 @@ toggle.addEventListener('click',()=>{
    for(const j of a.links){
     if(j<=i)continue;
     const b=nodes[j],d=Math.hypot(a.x-b.x,a.y-b.y),limit=Math.min(180,w*.24),alpha=Math.max(0,1-d/limit)*.62;
+    // Connection wire: fades naturally as its nodes approach the link limit.
     ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
-    ctx.strokeStyle=`rgba(${blue},${alpha})`;ctx.lineWidth=.65+Math.min(a.z,b.z)*.8;ctx.stroke();
-    if(alpha>.25){
-     const pulse=(Math.sin(t*.0012+i+j)+1)/2;
-     ctx.beginPath();ctx.arc(a.x+(b.x-a.x)*pulse,a.y+(b.y-a.y)*pulse,1.15,0,Math.PI*2);
-     ctx.fillStyle=`rgba(${cyan},${alpha*.8})`;ctx.fill();
+    ctx.strokeStyle=`rgba(${blue},${alpha})`;ctx.lineWidth=.7+Math.min(a.z,b.z)*.75;ctx.stroke();
+    if(alpha>.12){
+     // Two binary packets travel along each link at a calm, varied speed.
+     const elapsed=t*.00016 + (i*0.173+j*0.071);
+     const progress=((elapsed%1)+1)%1;
+     const reverse=((elapsed*.73+.43)%1+1)%1;
+     const packets=[{p:progress,bit:((i+j)%2?'1':'0')},{p:reverse,bit:((i*j+1)%2?'0':'1')}];
+     packets.forEach((packet,k)=>{
+       const px=a.x+(b.x-a.x)*packet.p,py=a.y+(b.y-a.y)*packet.p;
+       ctx.save();
+       ctx.globalAlpha=alpha*(.62+k*.15);
+       ctx.font=`500 ${Math.max(8,Math.min(10,9*Math.min(a.z,b.z)+2))}px "DM Mono", monospace`;
+       ctx.textAlign='center';ctx.textBaseline='middle';
+       ctx.shadowBlur=5;ctx.shadowColor=`rgba(${cyan},.25)`;
+       ctx.fillStyle=`rgba(${cyan},1)`;
+       ctx.fillText(packet.bit,px,py);
+       ctx.restore();
+     });
+     // Small travelling signal glow behind the binary data.
+     const pulse=(Math.sin(t*.001+i+j)+1)/2;
+     ctx.beginPath();ctx.arc(a.x+(b.x-a.x)*pulse,a.y+(b.y-a.y)*pulse,1.3,0,Math.PI*2);
+     ctx.fillStyle=`rgba(${cyan},${alpha*.7})`;ctx.fill();
     }
    }
   }
