@@ -49,21 +49,21 @@ button{font:inherit}
 .theme-toggle:hover{transform:rotate(-12deg);border-color:var(--blue2)}
 .login{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:0 19px;border-radius:999px;background:var(--blue);border:1px solid var(--blue);color:white;font-size:12px;font-weight:800;box-shadow:0 8px 25px color-mix(in srgb,var(--blue) 22%,transparent);transition:transform .2s,box-shadow .2s}
 .login:hover{transform:translateY(-2px);box-shadow:0 12px 28px color-mix(in srgb,var(--blue) 30%,transparent)}
-.hero-main{position:relative;z-index:2;flex:1;display:flex;align-items:center;width:min(1240px,calc(100% - 56px));margin:0 auto;padding:50px 0 100px}
-.copy{max-width:770px;position:relative;z-index:2}
+.hero-main{position:relative;z-index:2;flex:1;display:flex;align-items:center;justify-content:center;text-align:center;width:min(1240px,calc(100% - 56px));margin:0 auto;padding:50px 0 100px}
+.copy{max-width:850px;position:relative;z-index:2;margin-inline:auto;display:flex;flex-direction:column;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid color-mix(in srgb,var(--blue2) 23%,var(--line));background:color-mix(in srgb,var(--blue2) 7%,var(--surface));border-radius:999px;color:var(--blue2);font:500 10px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
 .pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px color-mix(in srgb,var(--cyan) 15%,transparent)}
 h1{font-size:clamp(60px,9.2vw,124px);line-height:.91;letter-spacing:-.09em;font-weight:900;margin:0;max-width:950px}
 h1 .nas{color:var(--blue2)}
 .tagline{font-size:clamp(21px,3vw,34px);line-height:1.3;font-weight:750;letter-spacing:-.045em;margin:28px 0 0;color:var(--text)}
 .tagline span{color:var(--cyan)}
-.support{max-width:490px;color:var(--muted);font-size:14px;line-height:1.9;margin:20px 0 0}
-.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:31px}
+.support{max-width:490px;color:var(--muted);font-size:14px;line-height:1.9;margin:20px 0 0;text-align:center}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:31px}
 .login.large{min-height:51px;padding:0 23px;font-size:13px}
 .text-link{display:inline-flex;align-items:center;gap:9px;padding:12px 4px;color:var(--muted);font-size:12px;font-weight:700;transition:color .2s}
 .text-link:hover{color:var(--blue2)}
 .background-network{position:absolute;z-index:0;inset:0;width:100%;height:100%;pointer-events:none}
-.network-hint{position:absolute;z-index:1;right:5.5%;bottom:7%;font:9px "DM Mono",monospace;letter-spacing:.08em;color:var(--muted);opacity:.7;text-transform:uppercase;pointer-events:none}
+.network-hint{display:none}
 .bottom-note{position:absolute;z-index:2;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1240px,calc(100% - 56px));margin:auto;padding:19px 0;border-top:1px solid var(--line);color:var(--muted);font-size:10px}
 .bottom-note .left{display:flex;align-items:center;gap:9px}.bottom-note i{color:var(--cyan)}
 .bottom-note .right{font-family:"DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
@@ -72,7 +72,7 @@ h1 .nas{color:var(--blue2)}
  .nav-right{gap:8px}.theme-toggle{width:40px;height:40px}.login{min-height:40px;padding:0 14px;font-size:11px}
  .hero-main{width:calc(100% - 34px);padding:50px 0 110px;align-items:center}
  .copy{max-width:620px}h1{font-size:clamp(55px,13vw,88px)}.eyebrow{font-size:9px;margin-bottom:23px}.tagline{margin-top:23px}.support{font-size:13px;max-width:430px}
- .network-hint{right:17px;bottom:83px;font-size:8px}.bottom-note{width:calc(100% - 34px);font-size:9px}.bottom-note .right{display:none}
+ .network-hint{display:none}.bottom-note{width:calc(100% - 34px);font-size:9px}.bottom-note .right{display:none}
 }
 @media(max-width:420px){
  .brand-sub{max-width:145px}.brand-text{font-size:15px}.nav{gap:8px}.nav-right{gap:6px}.login{padding:0 11px}.hero-main{padding-top:35px}h1{font-size:clamp(49px,13vw,64px)}.tagline{font-size:22px}.hero-actions{gap:8px}.text-link{font-size:11px}
@@ -151,7 +151,7 @@ toggle.addEventListener('click',()=>{
   const r=canvas.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(window.devicePixelRatio||1,2);
   canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
   const count=Math.max(28,Math.min(78,Math.round(w/17)));
-  nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.30,.30),vy:random(-.25,.25),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
+  nodes=Array.from({length:count},()=>({x:random(0,w),y:random(0,h),z:random(.25,1),vx:random(-.48,.48),vy:random(-.40,.40),r:random(1.1,2.5),links:[],phase:random(0,6.28)}));
   for(let i=0;i<nodes.length;i++){
    const nearest=nodes.map((n,j)=>({j,d:Math.hypot(n.x-nodes[i].x,n.y-nodes[i].y)})).filter(v=>v.j!==i).sort((a,b)=>a.d-b.d);
    for(const c of nearest){
@@ -161,7 +161,6 @@ toggle.addEventListener('click',()=>{
     if(Math.random()<.55){nodes[i].links.push(c.j);nodes[c.j].links.push(i);}
    }
   }
-  paint(0);
  }
  function paint(t){
   ctx.clearRect(0,0,w,h);
@@ -206,9 +205,9 @@ toggle.addEventListener('click',()=>{
     ctx.strokeStyle=`rgba(${blue},${alpha})`;ctx.lineWidth=.7+Math.min(a.z,b.z)*.75;ctx.stroke();
     if(alpha>.12){
      // Two binary packets travel along each link at a calm, varied speed.
-     const elapsed=t*.00030*motionScale + (i*0.173+j*0.071);
+     const elapsed=t*.00048*motionScale + (i*0.173+j*0.071);
      const progress=((elapsed%1)+1)%1;
-     const reverse=((elapsed*.81+.43)%1+1)%1;
+     const reverse=((elapsed*.91+.43)%1+1)%1;
      const packets=[{p:progress,bit:((i+j)%2?'1':'0')},{p:reverse,bit:((i*j+1)%2?'0':'1')}];
      packets.forEach((packet,k)=>{
        const px=a.x+(b.x-a.x)*packet.p,py=a.y+(b.y-a.y)*packet.p;
