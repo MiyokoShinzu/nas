@@ -100,7 +100,7 @@ h1 .nas{color:var(--blue2)}
   <div class="copy">
    <div class="eyebrow"><span class="pulse"></span> ICPEP.SE · CSU Carig Campus</div>
    <h1>Connect with<br><span class="nas">NAS.</span></h1>
-   <p class="tagline">Build the network,<br><span>Protect the future.</span></p>
+   <p class="tagline">Build the network,<span>Protect the future.</span></p>
    <p class="support">A community for future computer engineers passionate about networking, infrastructure, and cybersecurity.</p>
    <div class="hero-actions">
     <a class="login large" href="login.php">Enter the network <i class="bi bi-arrow-up-right"></i></a>
@@ -109,7 +109,7 @@ h1 .nas{color:var(--blue2)}
   </div>
  </main>
 
- <div class="network-hint">Binary data in motion · max 3 links per node</div>
+ <div class="network-hint"></div>
  <div class="bottom-note">
   <div class="left"><i class="bi bi-diagram-3-fill"></i> <span>ICPEP.SE Organization · Cagayan State University, Carig Campus</span></div>
   <div class="right">College of Engineering and Architecture / Computer Engineering</div>
