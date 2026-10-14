@@ -1,8 +1,8 @@
 <?php
 /* =========================================================
-   ETS-ASYNC LANDING PAGE
-   College of Engineering and Architecture
-   GitHub + Anime.js Inspired Design
+   NAS CLUB LANDING PAGE
+   Network Administrator and Security Club
+   ICPEP.SE Organization | CSU Carig Campus
    ========================================================= */
 
 date_default_timezone_set('Asia/Manila');
@@ -23,18 +23,18 @@ $currentYear = date('Y');
         content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="ETS-Async — Asynchronous Learning Portal for students of the College of Engineering and Architecture.">
+        content="NAS — Network Administrator and Security Club under ICPEP.SE Organization, Cagayan State University Carig Campus, College of Engineering and Architecture, Computer Engineering Department.">
 
     <meta name="theme-color"
         content="#0d1117">
 
     <meta name="author"
-        content="ETS-DEV">
+        content="NAS Club | ICPEP.SE Organization">
 
     <!-- =====================================================
          PAGE TITLE
     ====================================================== -->
-    <title>ETS-Async | College of Engineering and Architecture</title>
+    <title>NAS Club | Network Administrator and Security Club</title>
 
     <!-- =====================================================
          FAVICON
@@ -2015,17 +2015,17 @@ $currentYear = date('Y');
 
                     <img
                         src="./assets/pubmat/head.png"
-                        alt="ETS-Async"
+                        alt="NAS Club"
                         class="brand-logo">
 
                     <div class="brand-text">
 
                         <span class="brand-name">
-                            ETS-Async
+                            NAS Club
                         </span>
 
                         <span class="brand-subtitle">
-                            Asynchronous Learning Portal
+                            Network Administrator and Security Club
                         </span>
 
                     </div>
@@ -2037,23 +2037,23 @@ $currentYear = date('Y');
                 <nav class="nav-links">
 
                     <a href="#platform">
-                        Platform
+                        About NAS
                     </a>
 
                     <a href="#how-it-works">
-                        How It Works
+                        What We Do
                     </a>
 
                     <a href="#guidelines">
-                        Guidelines
+                        Get Involved
                     </a>
 
-                    <a href="login.php"
+                    <a href="#platform"
                         class="nav-login">
 
-                        <i class="bi bi-box-arrow-in-right"></i>
+                        <i class="bi bi-people-fill"></i>
 
-                        Login
+                        Explore Club
 
                     </a>
 
@@ -2089,46 +2089,45 @@ $currentYear = date('Y');
 
                             <span class="eyebrow-dot"></span>
 
-                            College of Engineering and Architecture
-                            • Asynchronous Learning
+                            ICPEP.SE ORGANIZATION • CSU CARIG CAMPUS
 
                         </div>
 
 
                         <h1 class="hero-title hero-animate">
 
-                            Learn.
+                            Connect.
                             <span class="gradient-text">
-                                Build.
+                                Secure.
                             </span>
-                            Complete.
+                            Innovate.
 
                         </h1>
 
 
                         <p class="hero-description hero-animate">
 
-                            A modern asynchronous learning environment
-                            for students of the College of Engineering
-                            and Architecture. Access learning materials,
-                            academic activities, and progress resources
-                            in one focused platform.
+                            Welcome to the Network Administrator and Security Club (NAS),
+                            a student organization under ICPEP.SE at Cagayan State University –
+                            Carig Campus, College of Engineering and Architecture,
+                            Computer Engineering Department. Explore networking, cybersecurity,
+                            system administration, hands-on learning, and collaboration.
 
                         </p>
 
 
                         <!-- =================================================
-                             LOGIN BUTTON
+                             CLUB CTA
                         ================================================== -->
 
                         <div class="hero-buttons hero-animate">
 
-                            <a href="login.php"
+                            <a href="#platform"
                                 class="btn-login">
 
-                                <i class="bi bi-box-arrow-in-right"></i>
+                                <i class="bi bi-shield-lock-fill"></i>
 
-                                Login
+                                Explore NAS
 
                             </a>
 
@@ -2146,7 +2145,7 @@ $currentYear = date('Y');
                                 <i class="bi bi-mortarboard-fill"></i>
 
                                 <span>
-                                    Engineering & Architecture
+                                    Computer Engineering Department
                                 </span>
 
                             </div>
@@ -2157,7 +2156,7 @@ $currentYear = date('Y');
                                 <i class="bi bi-cloud-check-fill"></i>
 
                                 <span>
-                                    Online Learning
+                                    Networking & Cybersecurity
                                 </span>
 
                             </div>
@@ -2168,7 +2167,7 @@ $currentYear = date('Y');
                                 <i class="bi bi-phone-fill"></i>
 
                                 <span>
-                                    Responsive Platform
+                                    Community & Collaboration
                                 </span>
 
                             </div>
@@ -2207,7 +2206,7 @@ $currentYear = date('Y');
                         <div class="floating-card floating-card-left">
 
                             <div class="floating-label">
-                                Learning Progress
+                                Community & Collaboration
                             </div>
 
                             <div class="floating-value">
@@ -2257,7 +2256,7 @@ $currentYear = date('Y');
                                 <span class="window-dot"></span>
 
                                 <span class="window-title">
-                                    ETS-Async / Dashboard
+                                    NAS Club / Dashboard
                                 </span>
 
                             </div>
@@ -2274,7 +2273,7 @@ $currentYear = date('Y');
 
                                     <img
                                         src="./assets/pubmat/head.png"
-                                        alt="ETS"
+                                        alt="NAS Club"
                                         class="side-logo">
 
 
@@ -2330,11 +2329,11 @@ $currentYear = date('Y');
                                 <div class="dashboard-content">
 
                                     <div class="mini-heading">
-                                        STUDENT DASHBOARD
+                                        NAS CLUB OVERVIEW
                                     </div>
 
                                     <div class="mini-title">
-                                        Welcome back!
+                                        Welcome, Member!
                                     </div>
 
 
@@ -2345,7 +2344,7 @@ $currentYear = date('Y');
                                         <div class="progress-header">
 
                                             <span>
-                                                Overall Learning Progress
+                                                Club Activities
                                             </span>
 
                                             <span class="progress-value">
@@ -2380,11 +2379,11 @@ $currentYear = date('Y');
                                         <div class="activity-text">
 
                                             <div class="activity-title">
-                                                Lecture Materials
+                                                Networking Labs
                                             </div>
 
                                             <div class="activity-subtitle">
-                                                Learning resources
+                                                Hands-on practice
                                             </div>
 
                                         </div>
@@ -2405,11 +2404,11 @@ $currentYear = date('Y');
                                         <div class="activity-text">
 
                                             <div class="activity-title">
-                                                Academic Activities
+                                                Security Workshops
                                             </div>
 
                                             <div class="activity-subtitle">
-                                                Assigned activities
+                                                Cybersecurity learning
                                             </div>
 
                                         </div>
@@ -2430,11 +2429,11 @@ $currentYear = date('Y');
                                         <div class="activity-text">
 
                                             <div class="activity-title">
-                                                Learning Progress
+                                                Member Development
                                             </div>
 
                                             <div class="activity-subtitle">
-                                                Track your progress
+                                                Build practical skills
                                             </div>
 
                                         </div>
@@ -2472,22 +2471,22 @@ $currentYear = date('Y');
                 <div class="section-heading reveal">
 
                     <div class="section-kicker">
-                        Platform
+                        About the Club
                     </div>
 
                     <h2 class="section-title">
 
-                        Everything you need
-                        for asynchronous learning.
+                        Building skills.
+                        Securing the future.
 
                     </h2>
 
                     <p class="section-description">
 
-                        ETS-Async provides a focused digital environment
-                        where students can access learning resources,
-                        complete academic activities, and monitor their
-                        progress.
+                        NAS brings Computer Engineering students together to explore
+                        network administration, information security, and practical technology.
+                        As a club under ICPEP.SE, we encourage peer learning, technical growth,
+                        teamwork, and responsible use of technology.
 
                     </p>
 
@@ -2508,14 +2507,14 @@ $currentYear = date('Y');
                         </div>
 
                         <h3>
-                            Lectures & Materials
+                            Network Administration
                         </h3>
 
                         <p>
 
-                            Access assigned lectures, readings,
-                            instructional materials, and other
-                            academic resources in one place.
+                            Explore network configuration, infrastructure,
+                            troubleshooting, server administration, and
+                            the fundamentals of reliable connected systems.
 
                         </p>
 
@@ -2533,14 +2532,14 @@ $currentYear = date('Y');
                         </div>
 
                         <h3>
-                            Academic Activities
+                            Cybersecurity & Defense
                         </h3>
 
                         <p>
 
-                            Complete assigned learning activities
-                            and academic tasks according to the
-                            instructions and deadlines provided.
+                            Learn security awareness, defensive practices,
+                            risk reduction, and responsible approaches to
+                            protecting systems and information.
 
                         </p>
 
@@ -2558,14 +2557,14 @@ $currentYear = date('Y');
                         </div>
 
                         <h3>
-                            Learning Progress
+                            Community & Collaboration
                         </h3>
 
                         <p>
 
-                            Monitor your learning activity and
-                            keep track of completed resources
-                            and academic requirements.
+                            Join peer-learning sessions, technical workshops,
+                            collaborative projects, and activities that
+                            help members grow together.
 
                         </p>
 
@@ -2592,21 +2591,21 @@ $currentYear = date('Y');
                 <div class="section-heading reveal">
 
                     <div class="section-kicker">
-                        How It Works
+                        What We Do
                     </div>
 
                     <h2 class="section-title">
 
-                        A simple workflow.
-                        Focused learning.
+                        Learn together.
+                        Build practical skills.
 
                     </h2>
 
                     <p class="section-description">
 
-                        ETS-Async keeps asynchronous coursework
-                        organized so students can focus on learning
-                        and completing their academic responsibilities.
+                        NAS encourages members to learn by exploring technology,
+                        participating in club activities, sharing knowledge, and
+                        practicing responsible network and security skills.
 
                     </p>
 
@@ -2623,14 +2622,13 @@ $currentYear = date('Y');
                         </div>
 
                         <h3>
-                            Login
+                            Connect
                         </h3>
 
                         <p>
 
-                            Sign in using your assigned ETS-Async
-                            account to access your available
-                            learning resources and activities.
+                            Meet fellow Computer Engineering students who share
+                            an interest in networks, systems, and cybersecurity.
 
                         </p>
 
@@ -2644,14 +2642,13 @@ $currentYear = date('Y');
                         </div>
 
                         <h3>
-                            Study
+                            Explore
                         </h3>
 
                         <p>
 
-                            Review lectures, readings, multimedia
-                            materials, and other resources provided
-                            for your classes.
+                            Take part in discussions, demonstrations, workshops,
+                            and practical learning opportunities.
 
                         </p>
 
@@ -2665,14 +2662,13 @@ $currentYear = date('Y');
                         </div>
 
                         <h3>
-                            Complete
+                            Build
                         </h3>
 
                         <p>
 
-                            Complete your assigned activities and
-                            monitor your learning progress through
-                            the platform.
+                            Build practical experience through team projects,
+                            hands-on labs, and responsible technical practice.
 
                         </p>
 
@@ -2699,13 +2695,13 @@ $currentYear = date('Y');
                 <div class="section-heading reveal">
 
                     <div class="section-kicker">
-                        Academic Guidelines
+                        Club Values
                     </div>
 
                     <h2 class="section-title">
 
-                        Learn responsibly.
-                        Work independently.
+                        Learn ethically.
+                        Secure responsibly.
 
                     </h2>
 
@@ -2726,13 +2722,13 @@ $currentYear = date('Y');
                         <div>
 
                             <h4>
-                                Use Your Assigned Account
+                                Practice Responsible Security
                             </h4>
 
                             <p>
 
-                                Use only your authorized account
-                                when accessing ETS-Async.
+                                Work only on systems and networks you own or have
+                                explicit permission to test.
 
                             </p>
 
@@ -2752,13 +2748,13 @@ $currentYear = date('Y');
                         <div>
 
                             <h4>
-                                Follow Activity Instructions
+                                Keep Learning
                             </h4>
 
                             <p>
 
-                                Read the instructions carefully
-                                before completing academic activities.
+                                Build knowledge through workshops, documentation,
+                                experimentation, and peer discussion.
 
                             </p>
 
@@ -2778,13 +2774,13 @@ $currentYear = date('Y');
                         <div>
 
                             <h4>
-                                Observe Deadlines
+                                Collaborate Respectfully
                             </h4>
 
                             <p>
 
-                                Monitor assigned deadlines and
-                                complete requirements on time.
+                                Share knowledge, respect different skill levels,
+                                and help create an inclusive technical community.
 
                             </p>
 
@@ -2804,13 +2800,13 @@ $currentYear = date('Y');
                         <div>
 
                             <h4>
-                                Practice Academic Integrity
+                                Uphold Ethics and Integrity
                             </h4>
 
                             <p>
 
-                                Submit your own work and follow
-                                applicable academic policies.
+                                Use technical knowledge responsibly and follow
+                                applicable laws, policies, and ethical standards.
 
                             </p>
 
@@ -2830,13 +2826,13 @@ $currentYear = date('Y');
                         <div>
 
                             <h4>
-                                Protect Your Account
+                                Protect Information
                             </h4>
 
                             <p>
 
-                                Keep your login credentials private
-                                and do not share your account.
+                                Respect privacy and safeguard credentials,
+                                data, devices, and network access.
 
                             </p>
 
@@ -2856,13 +2852,13 @@ $currentYear = date('Y');
                         <div>
 
                             <h4>
-                                Check Regularly
+                                Participate Actively
                             </h4>
 
                             <p>
 
-                                Regularly check ETS-Async for new
-                                lectures, activities, and announcements.
+                                Stay involved in club announcements, activities,
+                                training sessions, and collaborative projects.
 
                             </p>
 
@@ -2887,32 +2883,32 @@ $currentYear = date('Y');
             <div class="final-cta-content reveal">
 
                 <div class="section-kicker">
-                    ETS-Async
+                    NAS Club
                 </div>
 
                 <h2>
 
-                    Your learning space.
+                    Your network.
                     <span class="gradient-text">
-                        Online.
+                        Your community.
                     </span>
 
                 </h2>
 
                 <p>
 
-                    Access your asynchronous learning environment
-                    through ETS-Async.
+                    Connect with future network administrators and security-minded
+                    Computer Engineers at CSU Carig Campus.
 
                 </p>
 
 
-                <a href="login.php"
+                <a href="#platform"
                     class="btn-login">
 
-                    <i class="bi bi-box-arrow-in-right"></i>
+                    <i class="bi bi-people-fill"></i>
 
-                    Login
+                    Discover NAS
 
                 </a>
 
@@ -2938,10 +2934,10 @@ $currentYear = date('Y');
 
                     <img
                         src="./assets/pubmat/head.png"
-                        alt="ETS-Async">
+                        alt="NAS Club">
 
                     <span>
-                        ETS-Async
+                        NAS Club
                     </span>
 
                 </div>
@@ -2950,8 +2946,8 @@ $currentYear = date('Y');
                 <div class="footer-copy">
 
                     © <?php echo $currentYear; ?>
-                    ETS-DEV.
-                    Asynchronous Learning Portal.
+                    Network Administrator and Security Club • ICPEP.SE Organization.
+                    Cagayan State University – Carig Campus • College of Engineering and Architecture • Computer Engineering Department.
 
                 </div>
 
@@ -2972,7 +2968,7 @@ $currentYear = date('Y');
 
     <script>
         /* =====================================================
-           ETS-ASYNC ANIME.JS INTERACTIONS
+           NAS CLUB ANIME.JS INTERACTIONS
         ====================================================== */
 
 
